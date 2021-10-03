@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const cryptoApiHeaders = {
     'x-rapidapi-host': 'coinranking1.p.rapidapi.com',
-    'x-rapidapi-key': 'b58de4fa2bmsh28d81186d441e37p1307cejsnd099c796e35d'
+    'x-rapidapi-key': process.env.API_KEY
 }
 
 const baseUrl = 'https://coinranking1.p.rapidapi.com';
@@ -28,4 +28,5 @@ export const cryptoApi = createApi({
     })
 });
 
-export const { useGetCryptosQuery, useGetExchangesQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } = cryptoApi;    //Same from endpoints just add 'use' at star and 'Query' at the end.
+export const { useGetCryptosQuery, useGetExchangesQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } = cryptoApi;
+//Same from endpoints just add 'use' at start and 'Query' at the end.
