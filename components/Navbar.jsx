@@ -35,9 +35,9 @@ function Navbar() {
             <div className="nav-logo-container">
                 <div style={{display: 'flex', marginTop: '1rem'}}>
                     <Avatar src={icon} size="large"/>
-                    <Typography.Title level={2} className="logo">
+                    <Typography level={2} className="logo">
                        <Link to="/">CryptoGraphy</Link>
-                    </Typography.Title>
+                    </Typography>
                     <Button className="menu-control-container" onClick={()=> setActiveMenu(!activeMenu)}>
                         <MenuOutlined/>
                     </Button>
