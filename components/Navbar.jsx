@@ -35,14 +35,14 @@ function Navbar() {
             <div className="nav-logo-container">
                 <div style={{display: 'flex', marginTop: '1rem'}}>
                     <Avatar src={icon} size="large"/>
-                    <Typography level={2} className="logo">
-                       <Link to="/">CryptoGraphy</Link>
-                    </Typography>
+                    <Title level={2} className="logo">
+                        <Link to="/">CryptoGraphy</Link>
+                    </Title>
                     <Button className="menu-control-container" onClick={()=> setActiveMenu(!activeMenu)}>
-                        <MenuOutlined/>
+                        <MenuOutlined />
                     </Button>
                 </div>
-                {activeMenu && (
+                { activeMenu && (
                     <Menu theme="dark">
                         <Menu.Item icon={<HomeOutlined />}>
                             <Link to="/">Home</Link>
@@ -56,8 +56,8 @@ function Navbar() {
                         <Menu.Item icon={<BulbOutlined />}>
                             <Link to="/news">News</Link>
                         </Menu.Item>
-                    </Menu>
-                )}
+                     </Menu>
+                 )}
             </div>
         </div>
     )
