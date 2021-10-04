@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
 import icon from '../images/icon.png';
 
+const { Title } = Typography;
+
 function Navbar() {
 
     const [activeMenu, setActiveMenu] = useState(false);
@@ -21,11 +23,11 @@ function Navbar() {
     }, []);
 
     useEffect(() => {
-        if(screenSize < 768 ){
-            setActiveMenu(false);
-        }else{
-            setActiveMenu(true);
-        }
+       if(screenSize < 768 ){
+           setActiveMenu(false);
+       }else{
+           setActiveMenu(true);
+       }
     }, [screenSize])
 
     return (
