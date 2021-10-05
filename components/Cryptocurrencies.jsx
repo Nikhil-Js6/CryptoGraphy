@@ -16,7 +16,7 @@ function Cryptocurrencies({ simplified }){
 
    useEffect(()=>{
 
-        const filteredData = cryptosList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm.toLowerCase()) );
+        const filteredData = cryptosList?.data?.coins.filter( (coin) => coin.name.toLowerCase().includes( searchTerm.toLowerCase() ));
 
         setCryptos(filteredData);
 
@@ -39,7 +39,7 @@ function Cryptocurrencies({ simplified }){
                                    title={`${currency.rank}. ${currency.name}`}
                                    extra={<img className="crypto-image" src={currency.iconUrl} alt=""/> }
                                    hoverable
-                              >
+                                >
 
                                  <p>Price: ${millify(currency.price)}</p>
                                  <p>Market Cap: ${millify(currency.marketCap)}</p>
