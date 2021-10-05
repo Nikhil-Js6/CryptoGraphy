@@ -24,8 +24,7 @@ function Homepage(){
                <Col span={8}><Statistic title="Total Cryptocurrencies" value={globalStats.total}/></Col>
                <Col span={8}><Statistic title="Total Exchanges" value={millify(globalStats.totalExchanges)}/></Col>
                <Col span={8}><Statistic title="Market Cap." value={millify(globalStats.totalMarketCap)}/></Col>
-               <Col span={8}><Statistic title="24 Hr Volume" value={millify(globalStats.total24hVolume)}/></Col>
-               <Col span={12}><Statistic title="Markets" value={millify(globalStats.totalMarkets)}/></Col>
+               
                <Col span={8}><Statistic title="Order" value={globalStats.order}/></Col>
                <Col span={12}><Statistic title="Limit" value={millify(globalStats.limit)}/></Col>
            </Row>
