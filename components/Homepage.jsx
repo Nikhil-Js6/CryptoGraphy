@@ -12,7 +12,7 @@ const { Title } = Typography;
 function Homepage(){
 
   const { data : cryptosData, isFetching } = useGetCryptosQuery(10);
-  const globalStats = data?.data?.stats;
+  const globalStats = cryptosData?.data?.stats;
 
     if(isFetching) return <Loader />;
 
@@ -29,15 +29,19 @@ function Homepage(){
                <Col span={8}><Statistic title="Order" value={globalStats.order}/></Col>
                <Col span={12}><Statistic title="Limit" value={millify(globalStats.limit)}/></Col>
            </Row>
+                                                              
            <div className="home-heading-container">
                 <Title level={2} className="home-title">Top 10 Cryptocurrencies in the World</Title>
                 <Title level={5} className="show-more"><Link to="/cryptocurrencies">Show more</Link></Title>
            </div>
+
            <Cryptocurrencies simplified={true}/>
+             
            <div className="home-heading-container">
                 <Title level={2} className="home-title">Latest Crypto News</Title>
                 <Title level={5} className="show-more"><Link to="/news">Show more</Link></Title>
            </div>
+
            <News />
 
        </div>
