@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import millify from 'millify';
@@ -10,14 +11,14 @@ const { Title } = Typography;
 
 function Homepage(){
 
-  const { data, isFetching } = useGetCryptosQuery(10);
-  console.log(data);
+  const { data : cryptosData, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
     if(isFetching) return <Loader />;
 
     return(
        <div>
+      
            <Title className="heading" level={2} >Global Crypto Stats</Title>
            <Row>
                <Col span={8}><Statistic title="Total Cryptocurrencies" value={globalStats.total}/></Col>
