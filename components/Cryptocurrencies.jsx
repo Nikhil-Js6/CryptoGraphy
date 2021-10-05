@@ -10,13 +10,13 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 function Cryptocurrencies({ simplified }){
    
    const count = simplified ? 10 : 100;
-   const{ data, isFetching } = useGetCryptosQuery(count);
+   const{ data: cryptosList, isFetching } = useGetCryptosQuery(count);
    const[cryptos, setCryptos] = useState(cryptosList?.data?.coins);
    const[searchTerm, setSearchTerm] = useState('');
 
    useEffect(()=>{
 
-        const filteredData = cryptosList?.data?.coins.filter( (coin) => coin.name.toLowerCase().includes( searchTerm.toLowerCase() ));
+        const filteredData = cryptosList?.data?.coins.filter( (coin)));
 
         setCryptos(filteredData);
 
