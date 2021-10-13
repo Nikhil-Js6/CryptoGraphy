@@ -1,7 +1,7 @@
 import React from 'react';
 import { Spin } from 'antd';
 
-function Loader(){
+function Loader() {
     return(
         <div className="loader">
             <Spin />
