@@ -6,7 +6,6 @@ function Loader(){
         <div className="loader">
             <Spin />
         </div>
-        
     )
 }
 
