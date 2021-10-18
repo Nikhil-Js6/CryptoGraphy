@@ -59,13 +59,13 @@ function CryptoDetails(){
                         
                     </Select>
 
-                    <LineChart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} coinName={cryptoDetails.name} />
+                    <LineChart coinHistory={ coinHistory } currentPrice={ millify(cryptoDetails.price) } coinName={ cryptoDetails.name } />
 
                     <Col className="stats-container">
                         <Col className="coin-value-statistics">
                             <Col className="coin-value-statistics-heading">
                                 <Title level={3} className="coin-details-heading">
-                                    {cryptoDetails.name} Value Statistics
+                                    { cryptoDetails.name} Value Statistics
                                 </Title>
                                 <p>
                                     An overview showing the Stats of {cryptoDetails.name}
