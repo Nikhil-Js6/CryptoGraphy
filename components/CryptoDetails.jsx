@@ -46,7 +46,7 @@ function CryptoDetails(){
                         { cryptoDetails.name } ({ cryptoDetails.slug }) Price
                     </Title>
                     <p>
-                        {cryptoDetails.name} Live Price in U.S. Dollars.
+                        { cryptoDetails.name } Live Price in U.S. Dollars.
                         View value statistics, MarketCap and Supply.
                     </p>
                     <Select
@@ -105,8 +105,8 @@ function CryptoDetails(){
                 <Col className="coin-desc-link">
                     <Row className="coin-desc">
                         <Title level={3} className="coin-details-heading">
-                            What is {cryptoDetails.name}
-                            {HTMLReactParser(cryptoDetails.description)}
+                            What is { cryptoDetails.name }
+                            {HTMLReactParser( cryptoDetails.description )}
                         </Title>
                     </Row>
                     <Col className="coin-links">
@@ -114,7 +114,7 @@ function CryptoDetails(){
                             { cryptoDetails.name } Links
                         </Title>
                         { 
-                          cryptoDetails.links.map((link)=>(
+                          cryptoDetails.links.map((link) => (
                               <Row className="coin-link" key={link.name}>
                                  <Title level={5} className="link-name">
                                      { link.type }
