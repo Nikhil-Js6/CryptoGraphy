@@ -65,10 +65,10 @@ function CryptoDetails(){
                         <Col className="coin-value-statistics">
                             <Col className="coin-value-statistics-heading">
                                 <Title level={3} className="coin-details-heading">
-                                    { cryptoDetails.name} Value Statistics
+                                    { cryptoDetails.name } Value Statistics
                                 </Title>
                                 <p>
-                                    An overview showing the Stats of {cryptoDetails.name}
+                                    An overview showing the Stats of { cryptoDetails.name }
                                 </p>
                             </Col>
                             {stats.map(({ icon, title, value})=>(
