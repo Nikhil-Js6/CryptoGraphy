@@ -43,7 +43,7 @@ function CryptoDetails(){
             <Col className="coin-detail-container">
                 <Col className="coin-heading-container">
                     <Title level={2} className="coin-name">
-                        {cryptoDetails.name} ({cryptoDetails.slug}) Price
+                        { cryptoDetails.name } ({ cryptoDetails.slug }) Price
                     </Title>
                     <p>
                         {cryptoDetails.name} Live Price in U.S. Dollars.
