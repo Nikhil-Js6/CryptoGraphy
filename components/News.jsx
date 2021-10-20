@@ -10,7 +10,8 @@ const { Option } = Select;
 
 const demoImg = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
-function News({ simplified }){
+function News({ simplified }) {
+    
     const [newsCategory, setNewsCategory]= useState('Cryptocurrency');
     const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
     const { data: cryptosList } = useGetCryptosQuery(100);
@@ -30,11 +31,12 @@ function News({ simplified }){
                            optionFilterProp="children"
                            onChange={(value) => setNewsCategory(value)}
                            filterOption={(input, option)=> option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0 }
-                       >
+                        >
                             <Option value="Cryptocurrency">Cryptocurrency</Option>
-                            {cryptosList?.data?.coins.map((coin)=>(
-                                <Option value={coin.name}>{coin.name}</Option>
-                            ))}
+                            {  cryptosList?.data?.coins.map((coin)=>(
+                                  <Option value={coin.name}>{coin.name}</Option>
+                               )) 
+                            }
                        </Select>
                    </Col>
                 )}
@@ -45,7 +47,7 @@ function News({ simplified }){
                             <a href={news.url} target="_blank" rel="noreferrer">
                                 <div style={{display: 'flex'}} >
                                     <Title level={4} className="news-title">{news.name}</Title>
-                                      <img style={{ maxWidth: '100px', maxHeight: '100px' }} src={ news?.image?.thumbnail?.contentUrl || demoImg } alt="news"/>
+                                    <img style={{ maxWidth: '100px', maxHeight: '100px' }} src={ news?.image?.thumbnail?.contentUrl || demoImg } alt="news"/>
                                 </div>
                                 <p>
                                     { news.description > 10
