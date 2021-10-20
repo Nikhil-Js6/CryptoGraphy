@@ -10,7 +10,7 @@ const { Option } = Select;
 
 const demoImg = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
-function News({simplified}){
+function News({ simplified }){
     const [newsCategory, setNewsCategory]= useState('Cryptocurrency');
     const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 });
     const { data: cryptosList } = useGetCryptosQuery(100);
@@ -38,26 +38,27 @@ function News({simplified}){
                        </Select>
                    </Col>
                 )}
-                {cryptoNews?.value.map((news=>(
+                {
+                  cryptoNews?.value.map((news=>(
                     <Col xs={24} sm={12} lg={12}>
                         <Card hoverable className="news-card">
                             <a href={news.url} target="_blank" rel="noreferrer">
                                 <div style={{display: 'flex'}} >
                                     <Title level={4} className="news-title">{news.name}</Title>
-                                      <img style={{maxWidth: '100px', maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImg } alt="news"/>
+                                      <img style={{ maxWidth: '100px', maxHeight: '100px' }} src={ news?.image?.thumbnail?.contentUrl || demoImg } alt="news"/>
                                 </div>
                                 <p>
                                     { news.description > 10
-                                       ? `${news.description.substring(0, 10)} ...`
+                                       ? `${ news.description.substring(0, 10) } ...`
                                        : news.description
                                     }
                                 </p>
                                 <div style={{marginTop: '2rem'}} className="provider-container">
                                     <div>
-                                        <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImg } alt=""/>
+                                        <Avatar src={ news.provider[0]?.image?.thumbnail?.contentUrl || demoImg } alt=""/>
                                         <Text className="provider-name">{news.provider[0]?.name}</Text>
                                     </div>
-                                    <Text>{moment(news.datePublished).startOf('ss').fromNow()}</Text>
+                                    <Text>{ moment(news.datePublished).startOf('ss').fromNow() }</Text>
                                 </div>
                             </a>
                         </Card>
