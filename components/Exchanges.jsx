@@ -31,19 +31,19 @@ const Exchanges = () => {
                 key={exchange.id}
                 showArrow={false}
                 header={(
-                  <Row key={exchange.id}>
-                    <Col span={6}>
-                      <Text><strong>{exchange.rank}.</strong></Text>
-                      <Avatar className="exchange-image" src={exchange.iconUrl} />
-                      <Text><strong>{exchange.name}</strong></Text>
-                    </Col>
-                    <Col span={6}>${millify(exchange.volume)}</Col>
-                    <Col span={6}>{millify(exchange.numberOfMarkets)}</Col>
-                    <Col span={6}>{millify(exchange.marketShare)}%</Col>
-                  </Row>
+                    <Row key={exchange.id}>
+                        <Col span={6}>
+                            <Text><strong>{ exchange.rank }.</strong></Text>
+                            <Avatar className="exchange-image" src={ exchange.iconUrl } />
+                            <Text><strong>{ exchange.name }</strong></Text>
+                        </Col>
+                        <Col span={6}>${ millify(exchange.volume) }</Col>
+                        <Col span={6}>{ millify(exchange.numberOfMarkets) }</Col>
+                        <Col span={6}>{ millify(exchange.marketShare) }%</Col>
+                    </Row>
                   )}
               >
-                {HTMLReactParser(exchange.description || '')}
+                { HTMLReactParser(exchange.description || '') }
               </Panel>
             </Collapse>
           </Col>
