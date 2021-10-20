@@ -41,7 +41,7 @@ function News({ simplified }) {
                    </Col>
                 )}
                 {
-                  cryptoNews?.value.map((news=>(
+                  cryptoNews?.value.map((news) => (
                     <Col xs={24} sm={12} lg={12}>
                         <Card hoverable className="news-card">
                             <a href={news.url} target="_blank" rel="noreferrer">
@@ -65,7 +65,8 @@ function News({ simplified }) {
                             </a>
                         </Card>
                     </Col>
-                )))}
+                   ))
+                }
             </Row>
        </div>
     )
